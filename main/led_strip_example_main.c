@@ -14,7 +14,8 @@
 #define RMT_LED_STRIP_GPIO_NUM      18       // NÚMERO DE GPIO DE LA PLACA BASE Q TIENE EL LED
 
 #define EXAMPLE_LED_NUMBERS         1        // TOTAL DE NÚMEROS LEDS CON LAS Q VAMOS A TRABAJAR
-#define EXAMPLE_CHASE_SPEED_MS      10
+#define EXAMPLE_COLOR_STEP_DELAY_MS 1000
+#define EXAMPLE_COLOR_DURATION_MS   60000
 
 static const char *TAG = "example";
 
@@ -78,7 +79,6 @@ void app_main(void)
     uint32_t green = 0;
     uint32_t blue = 0;
     uint16_t hue = 0;
-    uint16_t start_rgb = 0;
 
     ESP_LOGI(TAG, "Create RMT TX channel");
     rmt_channel_handle_t led_chan = NULL;
@@ -105,20 +105,32 @@ void app_main(void)
     rmt_transmit_config_t tx_config = {
         .loop_count = 0, // no transfer loop
     };
-    while (1) {
-    led_strip_hsv2rgb(hue, 100, 100, &red, &green, &blue);
+    TickType_t start_ticks = xTaskGetTickCount();
+    const TickType_t duration_ticks = pdMS_TO_TICKS(EXAMPLE_COLOR_DURATION_MS);
 
-    // El encoder de este proyecto espera los bytes en orden G-R-B.
-    led_strip_pixels[0] = green;
-    led_strip_pixels[1] = red;
-    led_strip_pixels[2] = blue;
+    while ((xTaskGetTickCount() - start_ticks) < duration_ticks) {
+        led_strip_hsv2rgb(hue, 100, 100, &red, &green, &blue);
 
+        // El encoder de este proyecto espera los bytes en orden G-R-B.
+        led_strip_pixels[0] = green;
+        led_strip_pixels[1] = red;
+        led_strip_pixels[2] = blue;
+
+        ESP_ERROR_CHECK(rmt_transmit(
+            led_chan, led_encoder, led_strip_pixels,
+            sizeof(led_strip_pixels), &tx_config));
+        ESP_ERROR_CHECK(rmt_tx_wait_all_done(led_chan, portMAX_DELAY));
+
+        vTaskDelay(pdMS_TO_TICKS(EXAMPLE_COLOR_STEP_DELAY_MS));
+        hue = (hue + 1) % 360;
+    }
+
+    led_strip_pixels[0] = 0;
+    led_strip_pixels[1] = 0;
+    led_strip_pixels[2] = 0;
     ESP_ERROR_CHECK(rmt_transmit(
         led_chan, led_encoder, led_strip_pixels,
         sizeof(led_strip_pixels), &tx_config));
     ESP_ERROR_CHECK(rmt_tx_wait_all_done(led_chan, portMAX_DELAY));
-
-    vTaskDelay(pdMS_TO_TICKS(20));
-    hue = (hue + 1) % 360;
-}
+    ESP_LOGI(TAG, "One-minute color cycle complete; LED turned off");
 }
