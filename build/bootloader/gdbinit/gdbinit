@@ -1,0 +1,2 @@
+source C:/Repos_Privilegiados/IoT/IoT-Lab2-LedStrip/build/bootloader/gdbinit/symbols
+source C:/Repos_Privilegiados/IoT/IoT-Lab2-LedStrip/build/bootloader/gdbinit/connect
