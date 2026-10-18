@@ -1,0 +1,107 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32s2-elf- --target esp32s2 --revision 0 C:\Repos_Privilegiados\IoT\IoT-Lab2\TemperatureSensor\build\temp_sensor.elf C:\Repos_Privilegiados\IoT\IoT-Lab2\TemperatureSensor\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py' '-p' 'COM7'
+-ROM:esp32s2-rc4-20191025
+Build:Oct 25 2019
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOO�ESP-ROM:esp32s2-rc4-20191025
+Build:Oct 25 2019
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3ffe5110,len:0x15b0
+load:0x4004a000,len:0xc4c
+load:0x4004e000,len:0x33b4
+entry 0x4004a1b8
+[0;32mI (21) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (21) boot: compile time Oct 18 2026 21:39:38[0m
+[0;32mI (22) boot: chip revision: v0.0[0m
+[0;32mI (22) boot: efuse block revision: v0.1[0m
+[0;32mI (25) boot.esp32s2: SPI Speed      : 80MHz[0m
+[0;32mI (29) boot.esp32s2: SPI Mode       : DIO[0m
+[0;32mI (33) boot.esp32s2: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (41) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (50) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (63) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (73) esp_image: segment 0: paddr=00010020 vaddr=3f000020 size=08ddch ( 36316) map[0m
+[0;32mI (88) esp_image: segment 1: paddr=00018e04 vaddr=3ffbe080 size=02328h (  9000) load[0m
+[0;32mI (91) esp_image: segment 2: paddr=0001b134 vaddr=40024000 size=04ee4h ( 20196) load[0m
+[0;32mI (101) esp_image: segment 3: paddr=00020020 vaddr=40080020 size=0e1e4h ( 57828) map[0m
+[0;32mI (115) esp_image: segment 4: paddr=0002e20c vaddr=40028ee4 size=05194h ( 20884) load[0m
+[0;32mI (121) esp_image: segment 5: paddr=000333a8 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (126) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (127) boot: Disabling RNG early entropy source...[0m
+[0;32mI (141) cache: Instruction cache 	: size 8KB, 4Ways, cache line size 32Byte[0m
+[0;32mI (141) cache: Data cache 		: size 8KB, 4Ways, cache line size 32Byte[0m
+[0;32mI (156) cpu_start: Unicore app[0m
+[0;32mI (163) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (164) cpu_start: Pro cpu start user code[0m
+[0;32mI (164) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (165) app_init: Application information:[0m
+[0;32mI (169) app_init: Project name:     temp_sensor[0m
+[0;32mI (174) app_init: App version:      da6e25b-dirty[0m
+[0;32mI (178) app_init: Compile time:     Oct 18 2026 21:37:56[0m
+[0;32mI (183) app_init: ELF file SHA256:  b0cc20b22...[0m
+[0;32mI (187) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (191) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (195) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (199) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (203) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (209) heap_init: At 3FFC0D80 len 0003B280 (236 KiB): RAM[0m
+[0;32mI (214) heap_init: At 3FFFC000 len 00003A10 (14 KiB): RAM[0m
+[0;32mI (219) heap_init: At 3FF9E000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (226) spi_flash: detected chip: generic[0m
+[0;32mI (228) spi_flash: flash io: dio[0m
+[0;33mW (231) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (244) main_task: Started on CPU0[0m
+[0;32mI (244) main_task: Calling app_main()[0m
+[0;32mI (244) example: Install temperature sensor, expected temp ranger range: 10~50 ℃[0m
+[0;32mI (254) temperature_sensor: Range [-10°C ~ 80°C], error < 1°C[0m
+[0;32mI (254) example: Enable temperature sensor[0m
+[0;32mI (264) example: Read temperature[0m
+[0;33mW (264) temperature_sensor: No calibration param in eFuse[0m
+[0;32mI (274) example: Temperature value 18.00 ℃[0m
+[0;32mI (1274) example: Temperature value 18.00 ℃[0m
+[0;32mI (2274) example: Temperature value 18.00 ℃[0m
+[0;32mI (3274) example: Temperature value 18.00 ℃[0m
+[0;32mI (4274) example: Temperature value 18.00 ℃[0m
+[0;32mI (5274) example: Temperature value 18.00 ℃[0m
+[0;32mI (6274) example: Temperature value 18.00 ℃[0m
+[0;32mI (7274) example: Temperature value 19.00 ℃[0m
+[0;32mI (8274) example: Temperature value 19.00 ℃[0m
+[0;32mI (9274) example: Temperature value 19.00 ℃[0m
+[0;32mI (10274) example: Temperature value 19.00 ℃[0m
+[0;32mI (11274) example: Temperature value 19.00 ℃[0m
+[0;32mI (12274) example: Temperature value 19.00 ℃[0m
+[0;32mI (13274) example: Temperature value 20.00 ℃[0m
+[0;32mI (14274) example: Temperature value 20.00 ℃[0m
+[0;32mI (15274) example: Temperature value 20.00 ℃[0m
+[0;32mI (16274) example: Temperature value 20.00 ℃[0m
+[0;32mI (17274) example: Temperature value 20.00 ℃[0m
+[0;32mI (18274) example: Temperature value 20.00 ℃[0m
+[0;32mI (19274) example: Temperature value 20.00 ℃[0m
+[0;32mI (20274) example: Temperature value 20.00 ℃[0m
+[0;32mI (21274) example: Temperature value 20.00 ℃[0m
+[0;32mI (22274) example: Temperature value 20.00 ℃[0m
+[0;32mI (23274) example: Temperature value 20.00 ℃[0m
+[0;32mI (24274) example: Temperature value 20.00 ℃[0m
+[0;32mI (25274) example: Temperature value 20.00 ℃[0m
+[0;32mI (26274) example: Temperature value 20.00 ℃[0m
+[0;32mI (27274) example: Temperature value 20.00 ℃[0m
+[0;32mI (28274) example: Temperature value 20.00 ℃[0m
+[0;32mI (29274) example: Temperature value 20.00 ℃[0m
+[0;32mI (30274) example: Temperature value 20.00 ℃[0m
+[0;32mI (31274) example: Temperature value 20.00 ℃[0m
+[0;32mI (32274) example: Temperature value 20.00 ℃[0m
+[0;32mI (33274) example: Temperature value 20.00 ℃[0m
+[0;32mI (34274) example: Temperature value 20.00 ℃[0m
+[0;32mI (35274) example: Temperature value 20.00 ℃[0m
+[0;32mI (36274) example: Temperature value 19.00 ℃[0m
+[0;32mI (37274) example: Temperature value 19.00 ℃[0m
+[0;32mI (38274) example: Temperature value 19.00 ℃[0m
+[0;32mI (39274) example: Temperature value 19.00 ℃[0m
+[0;32mI (40274) example: Temperature value 19.00 ℃[0m
+[0;32mI (41274) example: Temperature value 19.00 ℃[0m
+[0;32mI (42274) example: Temperature value 19.00 ℃[0m
+[0;32mI (43274) example: Temperature value 19.00 ℃[0m

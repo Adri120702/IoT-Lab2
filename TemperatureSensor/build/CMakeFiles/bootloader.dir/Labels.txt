@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TemperatureSensor/build/CMakeFiles/bootloader
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TemperatureSensor/build/CMakeFiles/bootloader.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TemperatureSensor/build/CMakeFiles/bootloader-complete.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TemperatureSensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TemperatureSensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TemperatureSensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TemperatureSensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TemperatureSensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TemperatureSensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TemperatureSensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
