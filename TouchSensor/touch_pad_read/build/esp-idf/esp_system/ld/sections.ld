@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: C:\Users\Pol\Documents\GitHub\IoT-Lab2-LedStrip\TouchSensor\touch_pad_read\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: C:\Repos_Privilegiados\IoT\IoT-Lab2\TouchSensor\touch_pad_read\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
  * SPDX-FileCopyrightText: 2021 Espressif Systems (Shanghai) CO LTD

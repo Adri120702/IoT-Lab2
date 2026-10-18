@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/CMakeFiles/bootloader
-C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/CMakeFiles/bootloader.rule
-C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/CMakeFiles/bootloader-complete.rule
-C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/CMakeFiles/bootloader
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/CMakeFiles/bootloader.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/CMakeFiles/bootloader-complete.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

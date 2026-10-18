@@ -13,8 +13,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader/bootloader.elf
+    add-symbol-file C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/touch_pad_read.elf
+file C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/touch_pad_read.elf

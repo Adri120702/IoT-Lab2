@@ -32,18 +32,19 @@ idf.py -p PORT flash monitor
 
 See the Getting Started Guide for full steps to configure and use ESP-IDF to build projects.
 
-## Example Output
+## Live Sensor Monitor
 
-ESP32-S2/S3 supports up to 14 capacitive touch pads, T1 - T14, which are connected to the specific GPIO pins. For the information of available pins please refer to ESP32-S2/S3 Technical Reference Manual. Note that T0 is an internal channel with no corresponding GPIO, it is mainly used for de-noise. This example will initialize all the 14 touch pads. The raw values of each pad can be monitored in the terminal:
+ESP32-S2/S3 supports up to 14 capacitive touch pads, T1 - T14. T0 is an internal channel used for de-noise and has no corresponding GPIO.
 
+The serial monitor refreshes the readings in place. On startup, the example samples each pad for about two seconds to establish a baseline; do not touch the sensors during calibration. The `CAMBIO` column is the current raw reading minus that baseline. A negative change is common when touching a pad, but the direction and size can vary with the board and wiring.
+
+```text
+PAD   BASE     ACTUAL   CAMBIO
+T1     6473      6120     -353
+T2     6507      6505       -2
 ```
-Touch Sensor read, the output format is:
-Touchpad num:[raw data]
 
-T1: [6473] T2: [6507] T3: [6638] T4: [8917] T5: [9053] T6: [7190] T7: [7176] T8: [7416] T9: [7145] T10: [7387] T11: [7973] T12: [7776] T13: [8151] T14: [8190]
-T1: [6463] T2: [6512] T3: [6643] T4: [8920] T5: [9050] T6: [7191] T7: [7176] T8: [7416] T9: [7143] T10: [7387] T11: [7974] T12: [7778] T13: [8152] T14: [8192]
-T1: [6476] T2: [6508] T3: [6641] T4: [8919] T5: [9053] T6: [7190] T7: [7177] T8: [7416] T9: [7143] T10: [7386] T11: [7974] T12: [7776] T13: [8153] T14: [8193]
-```
+The display uses ANSI escape sequences to clear the terminal. Use a serial monitor that supports ANSI for the in-place refresh.
 
 ## Troubleshooting
 

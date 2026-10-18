@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/esp-idf/esp_hal_asrc/install_local_manifest.txt"
+  file(WRITE "C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/esp-idf/esp_hal_asrc/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

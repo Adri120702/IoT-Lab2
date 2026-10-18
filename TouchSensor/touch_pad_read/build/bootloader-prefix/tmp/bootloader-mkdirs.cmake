@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/esp/v6.1/esp-idf/components/bootloader/subproject")
   file(MAKE_DIRECTORY "C:/esp/v6.1/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader"
-  "C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix"
-  "C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/tmp"
-  "C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src"
-  "C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader"
+  "C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix"
+  "C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/tmp"
+  "C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src"
+  "C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <inttypes.h>
+#include "esp_err.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/touch_pad.h"
@@ -13,6 +14,8 @@
 
 #define TOUCH_BUTTON_NUM    14
 #define TOUCH_CHANGE_CONFIG 0
+#define TOUCH_BASELINE_SAMPLES 10
+#define TOUCH_SAMPLE_DELAY_MS 200
 
 static const char *TAG = "touch read";
 static const touch_pad_t button[TOUCH_BUTTON_NUM] = {
@@ -38,19 +41,40 @@ static const touch_pad_t button[TOUCH_BUTTON_NUM] = {
  */
 static void tp_example_read_task(void *pvParameter)
 {
-    uint32_t touch_value;
+    uint32_t baseline[TOUCH_BUTTON_NUM] = {0};
+    uint32_t touch_value[TOUCH_BUTTON_NUM];
+    uint64_t baseline_sum[TOUCH_BUTTON_NUM] = {0};
 
-    /* Wait touch sensor init done */
-    vTaskDelay(100 / portTICK_PERIOD_MS);
-    printf("Touch Sensor read, the output format is: \nTouchpad num:[raw data]\n\n");
+    printf("Calibrando durante %d segundos. No toques los sensores...\n",
+           TOUCH_BASELINE_SAMPLES * TOUCH_SAMPLE_DELAY_MS / 1000);
+    fflush(stdout);
+
+    for (int sample = 0; sample < TOUCH_BASELINE_SAMPLES; sample++) {
+        for (int i = 0; i < TOUCH_BUTTON_NUM; i++) {
+            ESP_ERROR_CHECK(touch_pad_read_raw_data(button[i], &touch_value[i]));
+            baseline_sum[i] += touch_value[i];
+        }
+        vTaskDelay(TOUCH_SAMPLE_DELAY_MS / portTICK_PERIOD_MS);
+    }
+    for (int i = 0; i < TOUCH_BUTTON_NUM; i++) {
+        baseline[i] = baseline_sum[i] / TOUCH_BASELINE_SAMPLES;
+    }
 
     while (1) {
         for (int i = 0; i < TOUCH_BUTTON_NUM; i++) {
-            touch_pad_read_raw_data(button[i], &touch_value);    // read raw data.
-            printf("T%d: [%4"PRIu32"] ", button[i], touch_value);
+            ESP_ERROR_CHECK(touch_pad_read_raw_data(button[i], &touch_value[i]));
         }
-        printf("\n");
-        vTaskDelay(200 / portTICK_PERIOD_MS);
+
+        printf("\033[2J\033[H");
+        printf("Monitor tactil | cambio = actual - base (al tocar suele bajar)\n\n");
+        printf("PAD   BASE     ACTUAL   CAMBIO\n");
+        for (int i = 0; i < TOUCH_BUTTON_NUM; i++) {
+            int64_t delta = (int64_t)touch_value[i] - (int64_t)baseline[i];
+            printf("T%-2d  %6" PRIu32 "   %6" PRIu32 "   %+6" PRId64 "\n",
+                   button[i], baseline[i], touch_value[i], delta);
+        }
+        fflush(stdout);
+        vTaskDelay(TOUCH_SAMPLE_DELAY_MS / portTICK_PERIOD_MS);
     }
 }
 

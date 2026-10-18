@@ -2,4 +2,4 @@
 -fno-builtin-memcpy
 -fno-builtin-memset
 -fno-builtin-bzero
-"-specs=C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/specs/picolibc.specs"
+"-specs=C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/specs/picolibc.specs"

@@ -1,2 +1,2 @@
-source C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader/gdbinit/symbols
-source C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader/gdbinit/connect
+source C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader/gdbinit/symbols
+source C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader/gdbinit/connect

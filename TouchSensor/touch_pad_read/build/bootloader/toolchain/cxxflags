@@ -1,4 +1,4 @@
-"-specs=C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/bootloader/specs/picolibc.specs"
+"-specs=C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/bootloader/specs/picolibc.specs"
 -mlongcalls
 -fno-builtin-memcpy
 -fno-builtin-memset

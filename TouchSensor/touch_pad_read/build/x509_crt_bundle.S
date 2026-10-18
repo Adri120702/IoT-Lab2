@@ -1,4 +1,4 @@
-/* * Data converted from C:/Users/Pol/Documents/GitHub/IoT-Lab2-LedStrip/TouchSensor/touch_pad_read/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Repos_Privilegiados/IoT/IoT-Lab2/TouchSensor/touch_pad_read/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
