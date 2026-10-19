@@ -22,9 +22,8 @@ void app_main(void)
     ESP_ERROR_CHECK(temperature_sensor_enable(temp_sensor));
 
     ESP_LOGI(TAG, "Read temperature");
-    int cnt = 20;
     float tsens_value;
-    while (cnt--) {
+    while (1) {
         ESP_ERROR_CHECK(temperature_sensor_get_celsius(temp_sensor, &tsens_value));
         ESP_LOGI(TAG, "Temperature value %.02f ℃", tsens_value);
         vTaskDelay(pdMS_TO_TICKS(1000));
